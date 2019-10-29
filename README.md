@@ -15,19 +15,7 @@ dotnet --version
 3)Run commands below to create a new .net project on your Desktop
 
 `
-cd Desktop
-`
-
-`
-mkdir mywebsite
-`
-
-`
-cd mywebsite
-`
-
-`
-dotnet new mvc
+cd Desktop;mkdir mywebsite;cd mywebsite;dotnet new mvc
 `
 
 4)Run the craeted by proect via the command below:
