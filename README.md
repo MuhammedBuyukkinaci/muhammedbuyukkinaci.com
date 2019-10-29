@@ -8,24 +8,24 @@ The code of [my personal website](http://muhammedbuyukkinaci.com) is here.
 
 2) Open up a new terminal check if .Net Core is istalled or not by the commmand below.
 
-```
+`
 dotnet --version
-```
+`
 
 3) Run commands below to create a new .net project on your Desktop
 
-```
+`
 cd Desktop
-```
-```
+`
+`
 mkdir mywebsite
-```
-```
+`
+`
 cd mywebsite
-```
-```
+`
+`
 dotnet new mvc
-```
+`
 
 4)Run the craeted by proect via the command below:
 
