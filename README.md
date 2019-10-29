@@ -20,8 +20,8 @@ cd Desktop;mkdir mywebsite;cd mywebsite;dotnet new mvc
 
 4)Run the craeted by proect via the command below:
 
-```
+`
 dotnet run
-```
+`
 
 5)Copy localhost:5000 and paste it on your favorite browser. You should see that application is running on your browser.
