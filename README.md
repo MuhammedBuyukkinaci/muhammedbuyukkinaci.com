@@ -17,12 +17,15 @@ dotnet --version
 `
 cd Desktop
 `
+
 `
 mkdir mywebsite
 `
+
 `
 cd mywebsite
 `
+
 `
 dotnet new mvc
 `
