@@ -6,7 +6,7 @@ The code of [my personal website](http://muhammedbuyukkinaci.com) is here.
 
 1) [Install .Net Core 3.0 on Ubuntu 18.04](https://dotnet.microsoft.com/download/linux-package-manager/ubuntu18-04/sdk-current)
 
-2) Open up a new terminal check if .Net Core is istalled or not by the commmand below.
+2) Open up a new terminal in order to check if .NET Core is installed or not by the commmand below.
 
 `
 dotnet --version
@@ -18,7 +18,7 @@ dotnet --version
 cd Desktop;mkdir mywebsite;cd mywebsite;dotnet new mvc
 `
 
-4) Run the craeted by proect via the command below:
+4) Run the created project via the command below:
 
 `
 dotnet run
