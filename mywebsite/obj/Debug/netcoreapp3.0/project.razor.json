@@ -1,5 +1,5 @@
 {
-  "FilePath": "/home/muhammed/Desktop/mywebsite/mywebsite.csproj",
+  "FilePath": "/home/muhammed/Documents/GitHub/muhammedbuyukkinaci.com/mywebsite/mywebsite.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14344,7 +14344,7 @@
   "RootNamespace": "mywebsite",
   "Documents": [
     {
-      "FilePath": "Views/Home/Index.cshtml",
+      "FilePath": "/home/muhammed/Documents/GitHub/muhammedbuyukkinaci.com/mywebsite/Views/Home/Index.cshtml",
       "TargetPath": "Views/Home/Index.cshtml",
       "FileKind": "mvc"
     }
