@@ -56,3 +56,5 @@
 /home/muhammed/Documents/GitHub/muhammedbuyukkinaci.com/mywebsite/obj/Debug/netcoreapp3.0/mywebsite.dll
 /home/muhammed/Documents/GitHub/muhammedbuyukkinaci.com/mywebsite/obj/Debug/netcoreapp3.0/mywebsite.pdb
 /home/muhammed/Documents/GitHub/muhammedbuyukkinaci.com/mywebsite/obj/Debug/netcoreapp3.0/mywebsite.csproj.CopyComplete
+/home/muhammed/Desktop/mywebsite/obj/Debug/netcoreapp3.0/mywebsite.csproj.CoreCompileInputs.cache
+/home/muhammed/Desktop/mywebsite/obj/Debug/netcoreapp3.0/mywebsite.genruntimeconfig.cache
