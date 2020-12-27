@@ -1,0 +1,9 @@
+.img-smaller{
+    width: 3rem;
+    height: 3rem;
+}
+
+.not-go-to-new-line{
+    white-space: nowrap;
+}
+
