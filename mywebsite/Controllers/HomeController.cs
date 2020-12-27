@@ -20,8 +20,47 @@ namespace mywebsite.Controllers
 
         public IActionResult Index()
         {
+            int saat = DateTime.Now.Hour;
+
+
+
             return View();
         }
+
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        public IActionResult YouKnowMe()
+        {
+            return View();
+        }
+
+        public IActionResult Testimonials()
+        {
+            return View();
+        }
+
+        public IActionResult Photos()
+        {
+            return View();
+        }
+
+        public IActionResult Projects()
+        {
+            return View();
+        }
+
+        public IActionResult MonetaryMetrics()
+        {
+            return View();
+        }
+
+
+
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
