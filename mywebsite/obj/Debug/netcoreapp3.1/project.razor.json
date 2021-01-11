@@ -1,5 +1,5 @@
 {
-  "FilePath": "/home/muhammed/Desktop/mywebsite/mywebsite.csproj",
+  "FilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/mywebsite.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14392,68 +14392,68 @@
   "RootNamespace": "mywebsite",
   "Documents": [
     {
-      "FilePath": "/home/muhammed/Desktop/mywebsite/Views/Home/Index.cshtml",
-      "TargetPath": "Views\\Home\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/muhammed/Desktop/mywebsite/Views/_ViewImports.cshtml",
-      "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/muhammed/Desktop/mywebsite/Views/Home/Contact.cshtml",
-      "TargetPath": "Views\\Home\\Contact.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/muhammed/Desktop/mywebsite/Views/Home/MonetaryMetrics.cshtml",
-      "TargetPath": "Views\\Home\\MonetaryMetrics.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/muhammed/Desktop/mywebsite/Views/Home/Photos.cshtml",
-      "TargetPath": "Views\\Home\\Photos.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/muhammed/Desktop/mywebsite/Views/Shared/_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/muhammed/Desktop/mywebsite/Views/Home/Projects.cshtml",
-      "TargetPath": "Views\\Home\\Projects.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/muhammed/Desktop/mywebsite/Views/Home/Testimonials.cshtml",
-      "TargetPath": "Views\\Home\\Testimonials.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/muhammed/Desktop/mywebsite/Views/Home/YouKnowMe.cshtml",
-      "TargetPath": "Views\\Home\\YouKnowMe.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/muhammed/Desktop/mywebsite/Views/Shared/Error.cshtml",
-      "TargetPath": "Views\\Shared\\Error.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/muhammed/Desktop/mywebsite/Views/Shared/_sidebar.cshtml",
+      "FilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/Views/Shared/_sidebar.cshtml",
       "TargetPath": "Views\\Shared\\_sidebar.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/muhammed/Desktop/mywebsite/Views/Shared/_ValidationScriptsPartial.cshtml",
+      "FilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/Views/Home/Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/Views/Home/Projects.cshtml",
+      "TargetPath": "Views\\Home\\Projects.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/Views/Home/MonetaryMetrics.cshtml",
+      "TargetPath": "Views\\Home\\MonetaryMetrics.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/home/muhammed/Desktop/mywebsite/Views/_ViewStart.cshtml",
+      "FilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/Views/Home/YouKnowMe.cshtml",
+      "TargetPath": "Views\\Home\\YouKnowMe.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/Views/_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/Views/Shared/_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/Views/Shared/Error.cshtml",
+      "TargetPath": "Views\\Shared\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/Views/Home/Testimonials.cshtml",
+      "TargetPath": "Views\\Home\\Testimonials.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/Views/_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/Views/Home/Contact.cshtml",
+      "TargetPath": "Views\\Home\\Contact.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/Views/Home/Photos.cshtml",
+      "TargetPath": "Views\\Home\\Photos.cshtml",
       "FileKind": "mvc"
     }
   ],
