@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "he+eyl1fxkqbamO25xKC4FAZL+oCHyNthwytlYEC+OwbEAn56h9iuRuICwiNJYdJ04jSxvMdF3d6fk0d/FVphQ==",
+  "dgSpecHash": "a9olqdP2guT+gxET2DwY+c6ofOe/K7DOarulKHF8uinS4CGghm6KmpeMUMUQu5xJ5UZOoPuijbiQzsLdE2Di6Q==",
   "success": true,
-  "projectFilePath": "/home/muhammed/Desktop/mywebsite/mywebsite.csproj",
+  "projectFilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/mywebsite.csproj",
   "expectedPackageFiles": [
     "/home/muhammed/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/3.1.9/microsoft.netcore.app.runtime.linux-x64.3.1.9.nupkg.sha512",
     "/home/muhammed/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/3.1.9/microsoft.aspnetcore.app.runtime.linux-x64.3.1.9.nupkg.sha512"
