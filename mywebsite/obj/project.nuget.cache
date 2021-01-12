@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "a9olqdP2guT+gxET2DwY+c6ofOe/K7DOarulKHF8uinS4CGghm6KmpeMUMUQu5xJ5UZOoPuijbiQzsLdE2Di6Q==",
+  "dgSpecHash": "DdTrn2yXTkEWZawOzh4YIKJEeV1ZkHyOslEsKu2ZC527pZ87uX/a2ND3F+VeI+lYoiCtwRDHDJQQYgWIukQN1Q==",
   "success": true,
   "projectFilePath": "/home/muhammed/Documents/muhammedbuyukkinaci.com/mywebsite/mywebsite.csproj",
   "expectedPackageFiles": [
-    "/home/muhammed/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/3.1.9/microsoft.netcore.app.runtime.linux-x64.3.1.9.nupkg.sha512",
-    "/home/muhammed/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/3.1.9/microsoft.aspnetcore.app.runtime.linux-x64.3.1.9.nupkg.sha512"
+    "/home/muhammed/.nuget/packages/microsoft.netcore.app.ref/3.0.0/microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "/home/muhammed/.nuget/packages/microsoft.netcore.app.runtime.linux-x64/3.0.3/microsoft.netcore.app.runtime.linux-x64.3.0.3.nupkg.sha512",
+    "/home/muhammed/.nuget/packages/microsoft.aspnetcore.app.runtime.linux-x64/3.0.3/microsoft.aspnetcore.app.runtime.linux-x64.3.0.3.nupkg.sha512",
+    "/home/muhammed/.nuget/packages/microsoft.netcore.app.host.linux-x64/3.0.3/microsoft.netcore.app.host.linux-x64.3.0.3.nupkg.sha512",
+    "/home/muhammed/.nuget/packages/microsoft.aspnetcore.app.ref/3.0.1/microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512"
   ],
   "logs": []
 }
