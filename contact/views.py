@@ -7,6 +7,6 @@ from .models import Skill
 # Create your views here.
 
 class ContactView(ListView):
-    template_name = "leads/lead_list.html"
+    template_name = "contact/contact.html"
     queryset = Skill.objects.all()
     context_object_name = "contacts"
