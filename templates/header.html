@@ -1,0 +1,71 @@
+<header>
+
+    <div id="header_left" class="row">
+        <div id="myname" class="col-sm-2">
+
+            <div class="mt-4" style="display: flex; justify-content: center;">
+                <a class="btn" asp-area="" asp-controller="Home" asp-action="Index">
+                    <i id="my_home_button" class="fas fa-home fa-3x" style="color: white;"></i>
+                </a>
+            </div>
+
+        </div>
+
+        <div id="header_center" class="col-sm-8">
+
+            <nav class="navbar navbar-expand-xl navbar-toggleable-xl navbar-light border-bottom box-shadow mb-3">
+                <div class="container">
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="navbar-collapse collapse d-xl-inline-flex flex-xl-row-reverse my-4">
+                        <ul class="container navbar-nav" id="navbar_ul">
+                            <li class="nav-item">
+                                <a class="list-group-item-action nav-link list-group-item-secondary rounded text-center mx-2 not-go-to-new-line"
+                                    href="{% url 'contact:contact' %}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="list-group-item-action nav-link list-group-item-success rounded text-center mx-2 not-go-to-new-line"
+                                    href="{% url 'contact:contact' %}">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="list-group-item-action nav-link list-group-item-danger rounded text-center mx-2 not-go-to-new-line"
+                                    href="{% url 'contact:contact' %}">You Know Me?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="list-group-item-action nav-link list-group-item-warning rounded text-center mx-2 not-go-to-new-line"
+                                    href="{% url 'contact:contact' %}">Testimonials</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="list-group-item-action nav-link list-group-item-info rounded text-center mx-2 not-go-to-new-line"
+                                    href="{% url 'contact:contact' %}">Photos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="list-group-item-action nav-link list-group-item-primary rounded text-center mx-2 not-go-to-new-line"
+                                    href="{% url 'contact:contact' %}">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="list-group-item-action nav-link list-group-item-dark rounded text-center mx-2 not-go-to-new-line"
+                                    href="{% url 'contact:contact' %}">Monetary Metrics</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+            </nav>
+
+        </div>
+
+        <div id="header_right" class="col-sm-2">
+
+        </div>
+
+    </div>
+
+
+</header>

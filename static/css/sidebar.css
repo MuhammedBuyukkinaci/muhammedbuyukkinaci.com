@@ -1,0 +1,17 @@
+#sidebar_ul li {
+    word-wrap: break-word;
+}
+
+.non_visible {
+    visibility: hidden;
+}
+
+@media screen and (max-width: 1600px) {
+    #sidebar_ul {
+        display: none;
+    }
+
+    #myname {
+        visibility: hidden;
+    }
+}
