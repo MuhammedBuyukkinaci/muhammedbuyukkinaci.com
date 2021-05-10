@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content_title %}
         <title>Contact</title>
@@ -6,12 +7,111 @@
 
 
 {% block content %}
-    <a href="{% url 'contact:contact' %}">Go back to leads</a>
-    <hr/>
-    <h1>Create a new lead</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit</button>
-    </form>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+
+    <div class="col-12 container my-3">
+        <h3 class="my-5 text-dark"><b>Communication</b></h3>
+        <div>
+            <div class="media mt-5" style="overflow: auto;">
+                <ul id="media_body_ul" class="media-body" style=" list-style: none;">
+                    <li class="my-3" style="font-size: 0.9rem;">
+                        <i class="fas fa-phone fa-1x text-success mr-2"></i> +90 552 219 01 50 <br>
+                    </li>
+                    <li class="my-3" style="font-size: 0.9rem;">
+                        <i class="far fa-envelope text-success mr-2"></i> muhammedbuyukkinaci@gmail.com <br>
+                    </li>
+                    <li class="my-3" style="font-size: 0.9rem;">
+                        <i class="fas fa-globe text-success mr-2"></i><a href="https://muhammedbuyukkinaci.com"> muhammedbuyukkinaci.com</a> <br>
+                    </li>
+                    <li class="my-3" style="font-size: 0.9rem;">
+                        <i class="fas fa-home text-success mr-2"></i>Sariyer, Istanbul, Turkey
+                    </li>
+                    <li class="my-3" style="font-size: 0.9rem;">
+                        <i class="far fa-file-pdf text-success mr-2"></i><a style="text-decoration: none;" href="{% static 'others/CV_Muhammed_Buyukkinaci.pdf' %}" download>  Download my resume</a>
+                    </li>
+
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <div class="container">
+        <h3 class="my-5 text-dark"><b>My Skills</b></h3>
+        <div class="col-lg-8">
+            {% for contact in contacts %}
+
+            <div class="my-4">
+                <h4> {{ contact.skill_name }} <span class="counter">{{ contact.skill_percent }}</span>%</h4>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: {{ contact.skill_percent }}%;" aria-valuenow="{{ contact.skill_percent }}"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+            
+        </div>
+    </div>
+
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+
+    <div class="container my-5">
+        <h3 class="my-5 text-dark"><b>Social Media</b></h3>
+        <div>
+            <ul class="contact_pages" style="list-style: none;">
+                {% for socialmedia in socialmedias %}
+                    <li class="mx-3" style="display: inline-block">
+                        <a href={{ socialmedia.page_link }}>
+                            <i class="{{ socialmedia.page_fontawesomeclass }}" style="color: {{ socialmedia.page_color }};"></i>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+
+    <div class="container my-5">
+        <h3 class="my-5 text-dark"><b>Business Pages</b></h3>
+        <div>
+            <ul class="contact_pages" style="list-style: none;">
+                {% for business in businesses %}
+                    <li class="mx-3" style="display: inline-block">
+                        <a href={{ business.page_link }}>
+                            <i class="{{ business.page_fontawesomeclass }}" style="color: {{ business.page_color }};"></i>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+
 {% endblock content %}
