@@ -3,18 +3,11 @@ var sidebar_list = document.getElementById("sidebar_ul").getElementsByTagName("a
 var navbar_list = document.getElementById("navbar_ul").getElementsByTagName("a");
 var my_home_button = document.getElementById('my_home_button');
 
-console.log(page_title);
-console.log(sidebar_list.length);
-
-
 for (var i = 0; i < sidebar_list.length; i++) {
-    console.log(sidebar_list[i].innerHTML );
     if (sidebar_list[i].innerHTML === page_title) {
         sidebar_list[i].classList.add("active");
         navbar_list[i].classList.add("active");
         navbar_list[i].classList.add("text-white");
-        console.log(sidebar_list[i]);
-        console.log(navbar_list[i]);
     } else {
         sidebar_list[i].parentElement.classList.add('non_visible');
     }
