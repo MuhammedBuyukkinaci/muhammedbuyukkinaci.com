@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content_title %}
+        <title>You Know Me?</title>
+{% endblock content_title %}
+
+{% block content %}
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                <div class="card text-center">
+                    <div class="card-header">
+                        This is a quiz designed to measure your information about me.
+                    </div>
+                    <div class="card-body">
+                        <h5 id="question" class="card-title">Question Text</h5>
+                    </div>
+                    <div>
+                        <div class="my-3" id="buttons" style="list-style:none;">
+
+                            <div class="d-block">
+                            <button id="btn0" class="btn btn-outline-danger m-2" style="width: 50%; word-wrap: break-word">
+                                <span id="choice0" style="font-size: 0.7rem;">
+                                    Choice 0
+                                </span>
+                            </button>
+                            </div>
+
+                            <div class="d-block">
+                            <button id="btn1" class="btn btn-outline-danger m-2" style="width: 50%; word-wrap: break-word">
+                                <span id="choice1" style="font-size: 0.7rem;">
+                                    Choice 1
+                                </span>
+                            </button>
+                            </div>
+                            
+                            <div class="d-block">
+                            <button id="btn2" class="btn btn-outline-danger m-2" style="width: 50%; word-wrap: break-word">
+                                <span id="choice2" style="font-size: 0.7rem;">
+                                    Choice 2
+                                </span>
+                            </button>
+                            </div>
+
+                            <div class="d-block">
+                            <button id="btn3" class="btn btn-outline-danger m-2" style="width: 50%; word-wrap: break-word">
+                                <span id="choice3" style="font-size: 0.7rem;">
+                                    Choice 3
+                                </span>
+                            </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="progress" class="card-footer mt-3">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block content_js %}
+    {% include "youknowme/quiz.html" %}
+{% endblock content_js %}

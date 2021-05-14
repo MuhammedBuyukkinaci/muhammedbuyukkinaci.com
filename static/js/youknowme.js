@@ -51,7 +51,7 @@ var q06 = new Question("Which menemen option is my favorite?",["Without onion an
 var q07 = new Question("What OS do I often use? ",["Windows",'Ubuntu','Mac Sierra','Red Hat'],'Ubuntu');
 var q08 = new Question("How many minutes do I run in a week approximately? ",["200",'180','240','150'],'150');
 var q09 = new Question("Which ML framework do I prefer? ",["PyTorch",'MxNet','Onnx','TensorFlow'],'TensorFlow');
-var q10 = new Question("Which couple is used to build up this website? ",["Django - Python",'ASP.NET Core - C#','Spring Boot - Java','Flask - Python'],'ASP.NET Core - C#');
+var q10 = new Question("Which couple is used to build up this website? ",['Django - Python','ASP.NET Core - C#','Spring Boot - Java','Flask - Python'],'Django - Python');
 
 var questions = [q01,q02,q03,q04,q05,q06,q07,q08,q09,q10];
 
