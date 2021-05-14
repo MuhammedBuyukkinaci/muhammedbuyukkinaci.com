@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'contact',
     'home',
     'youknowme',
+    'testimonials',
 ]
 
 MIDDLEWARE = [

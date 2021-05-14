@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content_title %}
+        <title>Testimonials</title>
+{% endblock content_title %}
+
+{% block content %}
+
+    
+<div id="accordion">
+
+    {% for testimonial in testimonials %}
+        <div class="card">
+
+            {% if testimonial.testimonial_collapsed %}
+                
+
+                <div class="card-header" id="heading{{testimonial.testimonial_number}}">
+                    <h6 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse{{testimonial.testimonial_number}}" aria-expanded="true"
+                            aria-controls="collapse{{testimonial.testimonial_number}}">
+                            {{testimonial.testimonial_name}}<span style="font-size: 0.7rem;" class="ml-1 badge badge-warning">{{testimonial.testimonial_title}}</span>
+                        </button>
+                    <h6>
+                </div>
+
+                <div id="collapse{{testimonial.testimonial_number}}" class="collapse" aria-labelledby="heading{{testimonial.testimonial_number}}" data-parent="#accordion">
+                    <div class="card-body">
+                        {{testimonial.testimonial_content}}
+                    </div>
+                </div>
+            {% else %}
+                
+                <div class="card-header" id="heading{{testimonial.testimonial_number}}">
+                    <h6 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{testimonial.testimonial_number}}" aria-expanded="true"
+                            aria-controls="collapse{{testimonial.testimonial_number}}">
+                            {{testimonial.testimonial_name}}<span style="font-size: 0.7rem;" class="ml-1 badge badge-warning">{{testimonial.testimonial_title}}</span>
+                        </button>
+                    <h6>
+                </div>
+                <div id="collapse{{testimonial.testimonial_number}}" class="collapse show" aria-labelledby="heading{{testimonial.testimonial_number}}" data-parent="#accordion">
+                    <div class="card-body">
+                        {{testimonial.testimonial_content}}
+                    </div>
+                </div>
+
+            {% endif %}
+
+
+            
+        </div>
+    {% endfor %}
+    
+</div>
+
+
+{% endblock content %}
