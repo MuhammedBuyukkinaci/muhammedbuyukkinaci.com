@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content_title %}
+        <title>Projects</title>
+{% endblock content_title %}
+
+
+{% block content %}
+    <div class="row">
+        {% for project in projects %}
+
+            <div class="col-xl-6 my-3">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h5 class="card-title">{{ project.project_name }}</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            {% for detail in details %}
+                                {% if detail.detail_project.project_name == project.project_name %}
+                                    <li class='text-primary'>{{ detail.detail_description }} </li>
+                                    <br>
+                                {% endif %}                           
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <a href="{{ project.project_link }}"
+                            class="btn btn-sm btn-primary">Github link to project</a>
+                    </div>
+                </div>
+            </div>
+
+        {% endfor %}
+    </div>
+    <br><br><br>
+    
+{% endblock content %}

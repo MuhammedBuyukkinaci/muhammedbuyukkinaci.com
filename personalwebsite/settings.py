@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'youknowme',
     'testimonials',
     'photos',
+    'projects',
 ]
 
 MIDDLEWARE = [

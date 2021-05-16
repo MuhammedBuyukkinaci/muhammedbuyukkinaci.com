@@ -26,5 +26,6 @@ urlpatterns = [
     path('youknowme/', include('youknowme.urls', namespace="youknowme") ),
     path('testimonials/', include('testimonials.urls', namespace="testimonials") ),
     path('photos/', include('photos.urls', namespace="photos") ),
+    path('projects/', include('projects.urls', namespace="projects") ),
     # path('monetarymetrics/', include('monetarymetrics.urls', namespace="monetarymetrics") ),
 ]
