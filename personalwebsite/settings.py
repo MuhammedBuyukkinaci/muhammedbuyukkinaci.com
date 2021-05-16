@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'home',
     'youknowme',
     'testimonials',
+    'photos',
 ]
 
 MIDDLEWARE = [
