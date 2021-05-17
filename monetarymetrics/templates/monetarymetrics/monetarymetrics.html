@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content_title %}
+        <title>Monetary Metrics</title>
+{% endblock content_title %}
+
+{% block content %}
+
+    <script id="jmbullion_charts">
+    (function () {
+        var t = document.getElementById("jmbullion_charts");
+        var s1 = document.createElement("script");
+        s1.async = true;
+        s1.src = "https://redist.nfusionsolutions.biz/client/jmbullion/widget/chart/smallhistorical/jmb_chart_Gold_USD?metal=Gold&currency=USD&width=336";
+        t.parentNode.insertBefore(s1, t);
+    })();
+
+    </script>
+
+    <div class="float-left col-6" style="margin: auto;">
+        <div id="jmb_chart_Gold_USD" style="width:336px;height:257px;">
+
+        </div>
+    </div>
+
+    
+
+{% endblock content %}

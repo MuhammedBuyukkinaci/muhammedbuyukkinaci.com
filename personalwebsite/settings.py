@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'testimonials',
     'photos',
     'projects',
+    'monetarymetrics',
 ]
 
 MIDDLEWARE = [
