@@ -36,13 +36,17 @@
 
         <main>
             <div class="row">
-                <div id="main_left" class="col-sm-2">
+                {% comment %} <div id="main_left" class="col-sm-2">
                     <div class="container">
                         {% include "sidebar.html" %}
                     </div>
-                </div>
+                </div> {% endcomment %}
 
-                <div id="main_center" class="col-sm-8">
+                 
+
+                <div id="main_center" class="container">
+
+                    <div class="col-sm-12">
 
                     <div class="container">
                         <main role="main" class="pb-3">
@@ -53,11 +57,13 @@
                         </main>
                     </div>
 
-                </div>
-
-                <div id="main_right" class="col-sm-2">
+                    </div>
 
                 </div>
+
+                {% comment %} <div id="main_right" class="col-sm-2">
+
+                </div> {% endcomment %}
 
             </div>
         </main>

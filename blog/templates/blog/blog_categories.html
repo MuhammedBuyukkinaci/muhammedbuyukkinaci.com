@@ -1,0 +1,19 @@
+<!-- The code below means header.html will be used 
+as Layout in this html file -->
+{% extends 'base.html' %}
+
+{% block content_title %}
+        <title>Categories</title>
+{% endblock content_title %}
+
+{% block content %}
+
+    {% for cat in categories %}
+        <p style = "color:blue;"> cat.category_title </p>
+        <p style = "color:red;"> cat.category_explanation </p>
+
+        <br><br><br><br><br><br>
+
+    {% endfor %}
+
+{% endblock %}
