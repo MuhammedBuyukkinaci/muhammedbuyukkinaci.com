@@ -1,0 +1,24 @@
+<!-- The code below means header.html will be used 
+as Layout in this html file -->
+{% extends 'base.html' %}
+
+{% block content_title %}
+        <title>Articles</title>
+{% endblock content_title %}
+
+{% block content %}
+
+    <div class="row">
+        {% for article in articles %}
+            <div class="col-sm-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-title">{{ article.article_title }}</div>
+                            <br/>
+                            <a href={{ article.pk }} class="btn btn-dark">Click to see more</a>
+                        </div>
+                    </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

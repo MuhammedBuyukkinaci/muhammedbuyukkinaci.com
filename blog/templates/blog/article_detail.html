@@ -1,0 +1,36 @@
+<!-- The code below means header.html will be used 
+as Layout in this html file -->
+{% extends 'base.html' %}
+
+{% block content_title %}
+        <title>Articles</title>
+{% endblock content_title %}
+
+{% comment %} {% block content %}
+
+    <div>{{object.article_title}}</div>
+{% endblock %} {% endcomment %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            {{object.article_title}}
+        </div>
+        <div class="card-body">
+            <blockquote class="blockquote mb-0">
+                <p>{{ object.article_explanation|linebreaks }}</p>
+
+                <footer class="blockquote-footer">
+                    <cite title="Source Time">{{ object.article_owner}}</cite>
+                </footer>
+
+                {% if object.article_source != None %}
+                <footer class="blockquote-footer">
+                    <cite title="Source Name"> {{object.article_source }}</cite>
+                </footer>
+                {% endif %}
+
+            </blockquote>
+        </div>
+    </div>
+{% endblock %}
