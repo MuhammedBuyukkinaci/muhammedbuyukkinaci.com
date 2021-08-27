@@ -30,10 +30,27 @@
 
     </div>
 
-    
+    <script type="text/javascript">
+
+    var i = 0;
+    var txt = "{{homepage.home_text}}"
+    var speed = 40;
+
+    console.log(txt);
+
+    function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("whoami").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    typeWriter();
+
+    </script>
+
 
 {% endblock content %}
 
-{% block content_js %}
-    {% include "home/onebyone.html" %}
-{% endblock content_js %}
+
