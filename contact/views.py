@@ -14,7 +14,6 @@ class ContactView(ListView):
     def get_queryset(self):
         # original qs
         qs = super().get_queryset() 
-        # filter by a variable captured from url, for example
         return qs.filter(skill_percent__gte=20).order_by('-skill_percent')
 
     def get_context_data(self, **kwargs):
