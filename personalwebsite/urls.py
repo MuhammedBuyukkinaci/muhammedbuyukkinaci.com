@@ -17,10 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from django.urls import include
 from home.views import HomeView
+from django.urls import re_path
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('home.urls', namespace="homedispatcher")),
+    path('', HomeView.as_view(), name = "homedispatcher" ),
     path('home/', include('home.urls', namespace="home") ),
     path('contact/', include('contact.urls', namespace="contact") ),
     path('youknowme/', include('youknowme.urls', namespace="youknowme") ),
@@ -28,4 +30,5 @@ urlpatterns = [
     path('photos/', include('photos.urls', namespace="photos") ),
     path('projects/', include('projects.urls', namespace="projects") ),
     path('blog/', include('blog.urls', namespace="blog") ),
+    re_path(r'^.*$', RedirectView.as_view(pattern_name = 'homedispatcher',permanent=False), name='homeredirector'),
 ]
