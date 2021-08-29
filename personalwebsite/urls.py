@@ -30,5 +30,6 @@ urlpatterns = [
     path('photos/', include('photos.urls', namespace="photos") ),
     path('projects/', include('projects.urls', namespace="projects") ),
     path('blog/', include('blog.urls', namespace="blog") ),
-    re_path(r'^.*$', RedirectView.as_view(pattern_name = 'homedispatcher',permanent=False), name='homeredirector'),
+    path('tinymce/',include('tinymce.urls')),
+    re_path(r'^.*$', RedirectView.as_view(url = '/',permanent=False), name='homeredirector'),
 ]

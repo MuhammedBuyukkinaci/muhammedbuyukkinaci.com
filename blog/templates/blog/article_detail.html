@@ -18,7 +18,7 @@ as Layout in this html file -->
         </div>
         <div class="card-body">
             <blockquote class="blockquote mb-0">
-                <p>{{ object.article_explanation|linebreaks }}</p>
+                <p>{{ object.article_explanation|safe }}</p>
 
                 <footer class="blockquote-footer">
                     <cite title="Source Time">{{ object.article_owner}}</cite>
