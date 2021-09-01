@@ -19,6 +19,8 @@ from django.urls import include
 from home.views import HomeView
 from django.urls import re_path
 from django.views.generic.base import RedirectView
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,5 +33,10 @@ urlpatterns = [
     path('projects/', include('projects.urls', namespace="projects") ),
     path('blog/', include('blog.urls', namespace="blog") ),
     path('tinymce/',include('tinymce.urls')),
-    re_path(r'^.*$', RedirectView.as_view(url = '/',permanent=False), name='homeredirector'),
+    #re_path(r'^.*$', RedirectView.as_view(url = '/',permanent=False), name='homeredirector'),
 ]
+
+if settings.DEBUG: # new
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns.append(re_path(r'^.*$', RedirectView.as_view(url = '/',permanent=False), name='homeredirector'))
