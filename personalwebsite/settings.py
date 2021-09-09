@@ -61,6 +61,8 @@ TINYMCE_DEFAULT_CONFIG = {
 'statusbar': True,
 }
 
+THUMBNAIL_QUALITY = 100
+THUMBNAIL_PROGRESSIVE = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -78,6 +80,7 @@ INSTALLED_APPS = [
     'projects',
     'blog',
     'tinymce',
+    'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [
