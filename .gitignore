@@ -142,3 +142,7 @@ tmp/
 
 # Vscode
 .vscode/
+
+# Media
+media/cache/
+media/images/
