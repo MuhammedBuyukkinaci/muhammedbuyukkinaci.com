@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static thumbnail %}
+{% load static %}
 
 {% block content_title %}
         <title>Photos</title>
@@ -24,9 +24,7 @@
             {% for post in object_list %}
                 {% if forloop.counter0 == 0 %}
                     <div class="carousel-item active">
-                        {% thumbnail post.filename "1600x1200" crop="center" as im %}
-                            <img class="d-block w-100 img-fluid" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ forloop.counter }} slide">
-                        {% endthumbnail %}
+                        <img class="d-block w-100 img-fluid" src="{{ post.image.url }}" alt="{{ forloop.counter }} slide">
                         <div class="carousel-caption">
                             <h6>{{ post.time }}</h6>
                             <h6>{{ post.location }}</h6>
@@ -34,13 +32,11 @@
                     </div>
                 {% else %}
                     <div class="carousel-item">
-                        {% thumbnail post.filename "1600x1200" crop="center" as im %}
-                            <img class="d-block w-100 img-fluid" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ forloop.counter }} slide">
-                        {% endthumbnail %}
+                        <img class="d-block w-100 img-fluid" src="{{ post.image.url }}" alt="{{ forloop.counter }} slide">
                         <div class="carousel-caption">
                                 <h6>{{ post.time }}</h6>
                                 <h6>{{ post.location }}</h6>
-                            </div>
+                        </div>
                     </div>
                 {% endif %}
             {% endfor %}
