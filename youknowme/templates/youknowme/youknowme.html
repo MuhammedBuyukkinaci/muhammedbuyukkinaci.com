@@ -17,18 +17,24 @@
                     <div class="card-body">
                         <h5 id="question" class="card-title">Question Text</h5>
                     </div>
+
+
                     <div>
+                        
                         <div class="my-3" id="buttons" style="list-style:none;">
+                            {% for count in choices %}
+                                <div class="d-block">
+                                <button id="btn{{count}}" class="btn btn-outline-danger m-2" style="width: 50%; word-wrap: break-word">
+                                    <span id="choice{{count}}" style="font-size: 0.7rem;">
+                                        Choice {{count}}
+                                    </span>
+                                </button>
+                                </div>
+                            {% endfor %}
 
-                            <div class="d-block">
-                            <button id="btn0" class="btn btn-outline-danger m-2" style="width: 50%; word-wrap: break-word">
-                                <span id="choice0" style="font-size: 0.7rem;">
-                                    Choice 0
-                                </span>
-                            </button>
-                            </div>
+                            
 
-                            <div class="d-block">
+                            {% comment %} <div class="d-block">
                             <button id="btn1" class="btn btn-outline-danger m-2" style="width: 50%; word-wrap: break-word">
                                 <span id="choice1" style="font-size: 0.7rem;">
                                     Choice 1
@@ -50,7 +56,7 @@
                                     Choice 3
                                 </span>
                             </button>
-                            </div>
+                            </div> {% endcomment %}
                         </div>
                     </div>
                     <div id="progress" class="card-footer mt-3">
@@ -63,5 +69,6 @@
 {% endblock content %}
 
 {% block content_js %}
-    {% include "youknowme/quiz.html" %}
+    {% comment %} {% include "youknowme/quiz.html" %} {% endcomment %}
+    <script type="text/javascript" src="{% static 'js/youknowme.js' %}"></script>
 {% endblock content_js %}
