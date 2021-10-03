@@ -44,5 +44,6 @@
 
 {% block content_js %}
     {% comment %} {% include "youknowme/quiz.html" %} {% endcomment %}
-    <script type="text/javascript" src="{% static 'js/youknowme.js' %}"></script>
+    {% comment %} <script type="text/javascript" src="{% static 'js/youknowme.js' %}"></script> {% endcomment %}
+    {% include "youknowme/includes/quiz.html" %}
 {% endblock content_js %}
