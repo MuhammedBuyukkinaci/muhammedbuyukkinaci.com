@@ -44,18 +44,16 @@
 
     }
 
-    var q01 = new Question("What is the current company that I work now?",["Turkcell",'Organon Analytics','UrbanStat','Analytica Solutions'],'UrbanStat');
-    var q02 = new Question("Which programming language do I use most?",["C#",'JavaScript','Python','C++'],'Python');
-    var q03 = new Question("Which programming language did I never use?",["C#",'Go','JavaScript','Python'],'Go');
-    var q04 = new Question("What is my favorite Turkish football team?",["Galatasaray",'Fenerbahçe','Beşiktaş','İstanbul Başakşehir'],'Fenerbahçe');
-    var q05 = new Question("Which Premier League Team do I support?",["Manchester City",'Manchester United','Chelsea','Arsenal'],'Manchester City');
-    var q06 = new Question("Which menemen option is my favorite?",["Without onion and without pepper",'Without onion and with pepper','With onion and without pepper','With onion and with pepper'],'With onion and without pepper');
-    var q07 = new Question("What OS do I often use? ",["Windows",'Ubuntu','Mac Sierra','Red Hat'],'Ubuntu');
-    var q08 = new Question("How many minutes do I run in a week approximately? ",["200",'180','240','150'],'150');
-    var q09 = new Question("Which ML framework do I prefer? ",["PyTorch",'MxNet','Onnx','TensorFlow'],'TensorFlow');
-    var q10 = new Question("Which couple is used to build up this website? ",['Django - Python','ASP.NET Core - C#','Spring Boot - Java','Flask - Python'],'Django - Python');
 
-    var questions = [q01,q02,q03,q04,q05,q06,q07,q08,q09,q10];
+    //questions
+    let all_questions = JSON.parse("{{js_data|escapejs}}");
+
+    var questions = [];
+
+    for(let i=0; i<all_questions.length; i++){
+        var q_temp = new Question(all_questions[i]['quiz_question'],[all_questions[i]['quiz_answer1'],all_questions[i]['quiz_answer2'],all_questions[i]['quiz_answer3'],all_questions[i]['quiz_answer4']],all_questions[i]['quiz_correct_answer']);
+        questions.push(q_temp);
+    } 
 
     //Start Quiz
 
