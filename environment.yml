@@ -26,6 +26,7 @@ dependencies:
     - django==3.2
     - django-resized==0.3.11
     - django-tinymce4-lite==1.8.0
+    - gunicorn==20.1.0
     - jsmin==2.2.2
     - pillow==8.3.1
     - psycopg2-binary==2.8.6
