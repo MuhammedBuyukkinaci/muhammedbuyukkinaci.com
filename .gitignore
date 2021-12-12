@@ -146,5 +146,13 @@ tmp/
 # Media
 media/cache/
 media/images/
+
+#staticfiles
 staticfiles/
+
+# Development Environment
 PERSONAL_ENV
+
+# Which EV's for Docker container
+ENV_TO_USE
+
