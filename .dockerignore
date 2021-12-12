@@ -1,0 +1,4 @@
+.git/
+ENV_TO_USE
+.gitattributes/
+.vscode/
