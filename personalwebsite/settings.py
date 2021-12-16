@@ -79,6 +79,7 @@ INSTALLED_APPS = [
     'projects',
     'blog',
     'tinymce',
+    'django_cleanup.apps.CleanupConfig',
 ]
 
 MIDDLEWARE = [
