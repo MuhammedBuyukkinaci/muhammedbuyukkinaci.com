@@ -154,5 +154,6 @@ staticfiles/
 PERSONAL_ENV
 
 # Which EV's for Docker container
-ENV_TO_USE
+.env_prod
+
 
