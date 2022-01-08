@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  my_django:
+    image: personalwebsite:v1
+    build: .
+    volumes:
+      - images:/app/media/images
+    container_name: my_django
+    environment:
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY}
+      DEBUG: ${DEBUG}
+      DJANGO_ALLOWED_HOSTS: ${DJANGO_ALLOWED_HOSTS}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DJANGO_LOGLEVEL: ${DJANGO_LOGLEVEL}
+    ports:
+       - "8080:8000"
+
+volumes:
+  images:
+    external: true
