@@ -26,4 +26,4 @@ ENV PATH /env/bin:$PATH
 
 EXPOSE 8000
 
-CMD ["gunicorn", "--bind", ":8000", "--workers", "3", "personalwebsite.wsgi:application"]
+ENTRYPOINT ["/bin/sh", "-c" , "/app/entrypoint.sh"]
