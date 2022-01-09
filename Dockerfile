@@ -1,5 +1,8 @@
 FROM python:3.9.9-alpine3.14
 
+# create the djangouser
+RUN addgroup -S myuser && adduser -S myuser -G myuser
+
 # File Author / Maintainer
 LABEL maintainer="Muhammed Buyukkinaci @MuhammedBuyukkinaci"
 
@@ -16,7 +19,9 @@ RUN set -ex \
         | xargs -r apk info --installed \
         | sort -u)" \
     && apk add --virtual rundeps $runDeps \
-    && apk del .build-deps
+    && apk del .build-deps \
+    && mkdir /app/staticfiles \
+    && mkdir /app/media 
 
 ADD . /app
 WORKDIR /app
@@ -24,6 +29,10 @@ WORKDIR /app
 ENV VIRTUAL_ENV /env
 ENV PATH /env/bin:$PATH
 
-EXPOSE 8000
+# change to djangouser against cyber attacks for security
+# By default, containers are run by root user but this is a bad practice.
+RUN chown myuser:myuser -R /app/
+USER myuser
+
 
 ENTRYPOINT ["/bin/sh", "-c" , "/app/entrypoint.sh"]
