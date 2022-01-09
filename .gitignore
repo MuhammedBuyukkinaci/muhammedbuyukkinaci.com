@@ -156,4 +156,6 @@ PERSONAL_ENV
 # Which EV's for Docker container
 .env_prod
 
+# Adding runall_dev.sh to gitignore
+runall_dev.sh
 
