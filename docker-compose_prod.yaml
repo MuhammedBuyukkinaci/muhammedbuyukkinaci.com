@@ -19,13 +19,14 @@ services:
     build:
       context: ./nginx
       dockerfile: Dockerfile_prod
-    image: nginx_image:latest
+    image: nginx_image
     volumes:
       - static_volume:/app/staticfiles
       - media_volume:/app/media
       - /home/pythonuser/certbot/www:/var/www/certbot/:ro
       - /home/pythonuser/nginx/conf/:/etc/nginx/conf.d/:ro  
     container_name: my_nginx
+    restart: always
     ports:
       - 8080:80
     depends_on:
@@ -37,6 +38,8 @@ services:
       - /home/pythonuser/certbot/www/:/var/www/certbot/:rw
       - /home/pythonuser/certbot/conf/:/etc/letsencrypt/:rw
     container_name: my_certbot
+    depends_on:
+      - my_nginx
 volumes:
   static_volume:
     external: true
