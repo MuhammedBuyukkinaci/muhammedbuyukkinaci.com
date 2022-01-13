@@ -23,20 +23,20 @@ services:
     volumes:
       - static_volume:/app/staticfiles
       - media_volume:/app/media
-      - /home/pythonuser/certbot/www:/var/www/certbot/:ro
-      - /home/pythonuser/nginx/conf/:/etc/nginx/conf.d/:ro  
+      # - /home/pythonuser/certbot/www:/var/www/certbot/:ro
+      # - /home/pythonuser/nginx/conf/:/etc/nginx/conf.d/:ro  
     container_name: my_nginx
     ports:
-      - 8080:80
+      - 80:80
     depends_on:
       - my_django
       
-  my_certbot:
-    image: certbot/certbot:latest
-    volumes:
-      - /home/pythonuser/certbot/www/:/var/www/certbot/:rw
-      - /home/pythonuser/certbot/conf/:/etc/letsencrypt/:rw
-    container_name: my_certbot
+  # my_certbot:
+  #   image: certbot/certbot:latest
+  #   volumes:
+  #     - /home/pythonuser/certbot/www/:/var/www/certbot/:rw
+  #     - /home/pythonuser/certbot/conf/:/etc/letsencrypt/:rw
+  #   container_name: my_certbot
 volumes:
   static_volume:
     external: true
