@@ -25,7 +25,7 @@ services:
       - media_volume:/app/media
     container_name: my_nginx
     ports:
-      - 8080:80
+      - 80:80
     depends_on:
       - my_django
 
