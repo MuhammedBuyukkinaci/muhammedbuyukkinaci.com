@@ -37,7 +37,7 @@ services:
   #     - /home/pythonuser/certbot/www/:/var/www/certbot/:rw
   #     - /home/pythonuser/certbot/conf/:/etc/letsencrypt/:rw
   #   container_name: my_certbot
-# volumes:
+volumes:
 #   static_volume:
 #     external: true
   media_volume:
