@@ -12,24 +12,24 @@ services:
     container_name: my_django
     env_file:
       - ./.env
-    expose:
-    - 8000
-
-  my_nginx:
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile_prod
-    image: nginx_image:latest
-    volumes:
-      - static_volume:/app/staticfiles
-      - media_volume:/app/media
-      # - /home/pythonuser/certbot/www:/var/www/certbot/:ro
-      # - /home/pythonuser/nginx/conf/:/etc/nginx/conf.d/:ro  
-    container_name: my_nginx
     ports:
-      - 80:80
-    depends_on:
-      - my_django
+    - 8000:8000
+
+  # my_nginx:
+  #   build:
+  #     context: ./nginx
+  #     dockerfile: Dockerfile_prod
+  #   image: nginx_image:latest
+  #   volumes:
+  #     - static_volume:/app/staticfiles
+  #     - media_volume:/app/media
+  #     # - /home/pythonuser/certbot/www:/var/www/certbot/:ro
+  #     # - /home/pythonuser/nginx/conf/:/etc/nginx/conf.d/:ro  
+  #   container_name: my_nginx
+  #   ports:
+  #     - 80:80
+  #   depends_on:
+  #     - my_django
       
   # my_certbot:
   #   image: certbot/certbot:latest

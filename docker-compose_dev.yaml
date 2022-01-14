@@ -12,22 +12,22 @@ services:
     container_name: my_django
     env_file:
       - ./.env
-    expose:
-    - 8000
-
-  my_nginx:
-    build:
-      context: ./nginx
-      dockerfile: Dockerfile_dev
-    image: nginx_image:latest
-    volumes:
-      - static_volume:/app/staticfiles
-      - media_volume:/app/media
-    container_name: my_nginx
     ports:
-      - 8080:80
-    depends_on:
-      - my_django
+    - 8000:8000
+
+  # my_nginx:
+  #   build:
+  #     context: ./nginx
+  #     dockerfile: Dockerfile_dev
+  #   image: nginx_image:latest
+  #   volumes:
+  #     - static_volume:/app/staticfiles
+  #     - media_volume:/app/media
+  #   container_name: my_nginx
+  #   ports:
+  #     - 8080:80
+  #   depends_on:
+  #     - my_django
 
 volumes:
   static_volume:
