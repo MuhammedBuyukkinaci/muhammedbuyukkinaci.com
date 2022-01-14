@@ -7,8 +7,8 @@ services:
       context: .
       dockerfile: Dockerfile_prod
     volumes:
-      - static_volume:/app/staticfiles
-      - media_volume:/app/media
+      - /home/pythonuser/staticfiles:/app/staticfiles
+      - /home/pythonuser/media:/app/media
     container_name: my_django
     env_file:
       - ./.env
@@ -37,8 +37,8 @@ services:
   #     - /home/pythonuser/certbot/www/:/var/www/certbot/:rw
   #     - /home/pythonuser/certbot/conf/:/etc/letsencrypt/:rw
   #   container_name: my_certbot
-volumes:
-  static_volume:
-    external: true
-  media_volume:
-    external: true
+# volumes:
+#   static_volume:
+#     external: true
+#   media_volume:
+#     external: true
