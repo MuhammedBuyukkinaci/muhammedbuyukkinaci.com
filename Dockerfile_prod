@@ -1,7 +1,7 @@
 FROM python:3.9.9-alpine3.14
 
 # create the djangouser
-RUN addgroup -S myuser && adduser -S myuser -G myuser
+#RUN addgroup -S myuser && adduser -S myuser -G myuser
 
 # File Author / Maintainer
 LABEL maintainer="Muhammed Buyukkinaci @MuhammedBuyukkinaci"
@@ -31,8 +31,8 @@ ENV PATH /env/bin:$PATH
 
 # change to djangouser against cyber attacks for security
 # By default, containers are run by root user but this is a bad practice.
-RUN chown myuser:myuser -R /app/
-USER myuser
+#RUN chown myuser:myuser -R /app/
+#USER myuser
 
 
 ENTRYPOINT ["/bin/sh", "-c" , "/app/entrypoint.sh"]
