@@ -27,7 +27,6 @@ urlpatterns = [
     path('', HomeView.as_view(), name = "homedispatcher" ),
     path('home/', include('home.urls', namespace="home") ),
     path('contact/', include('contact.urls', namespace="contact") ),
-    path('youknowme/', include('youknowme.urls', namespace="youknowme") ),
     path('testimonials/', include('testimonials.urls', namespace="testimonials") ),
     path('photos/', include('photos.urls', namespace="photos") ),
     path('projects/', include('projects.urls', namespace="projects") ),

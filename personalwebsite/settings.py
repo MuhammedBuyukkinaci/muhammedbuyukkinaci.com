@@ -73,7 +73,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'contact',
     'home',
-    'youknowme',
     'testimonials',
     'photos',
     'projects',
