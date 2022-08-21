@@ -34,7 +34,7 @@ urlpatterns = [
     path('projects/', include('projects.urls', namespace="projects") ),
     path('blog/', include('blog.urls', namespace="blog") ),
     path('tinymce/',include('tinymce.urls')),
-    url(r'^robots\.txt$', TemplateView.as_view(template_name="personalwebsite/robots.txt", content_type='text/plain')),
+    url(r'robots.txt', TemplateView.as_view(template_name="personalwebsite/robots.txt", content_type='text/plain')),
 
     #re_path(r'^.*$', RedirectView.as_view(url = '/',permanent=False), name='homeredirector'),
 ]
