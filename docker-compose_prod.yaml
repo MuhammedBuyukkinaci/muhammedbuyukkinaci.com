@@ -7,8 +7,8 @@ services:
       context: .
       dockerfile: Dockerfile_prod
     volumes:
-      - /home/pythonuser/staticfiles:/app/staticfiles
-      - /home/pythonuser/media:/app/media
+      - /home/pythonuser/muhammed/staticfiles:/app/staticfiles
+      - /home/pythonuser/muhammed/media:/app/media
     container_name: my_django
     env_file:
       - ./.env
