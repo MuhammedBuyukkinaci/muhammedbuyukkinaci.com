@@ -22,7 +22,6 @@ from django.views.generic.base import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic import TemplateView
-from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,7 +33,7 @@ urlpatterns = [
     path('projects/', include('projects.urls', namespace="projects") ),
     path('blog/', include('blog.urls', namespace="blog") ),
     path('tinymce/',include('tinymce.urls')),
-    url('robots.txt', TemplateView.as_view(template_name="personalwebsite/robots.txt", content_type='text/plain')),
+    path('robots.txt', TemplateView.as_view(template_name="personalwebsite/robots.txt", content_type='text/plain')),
 
     #re_path(r'^.*$', RedirectView.as_view(url = '/',permanent=False), name='homeredirector'),
 ]
