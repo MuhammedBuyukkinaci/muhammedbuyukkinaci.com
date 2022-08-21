@@ -10,6 +10,7 @@ services:
       - /home/pythonuser/muhammed/muhammedbuyukkinaci.com/staticfiles:/app/staticfiles
       - /home/pythonuser/muhammed/muhammedbuyukkinaci.com/media:/app/media
     container_name: my_django
+    restart: always
     env_file:
       - ./.env
     ports:
