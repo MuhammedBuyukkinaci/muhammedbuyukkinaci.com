@@ -1,6 +1,18 @@
 version: '3.7'
 
 services:
+  my_prod_postgres:
+    image: postgres
+    container_name: my_prod_postgres
+    volumes:
+      - my_prod_volume:/var/lib/postgresql/data
+      - /home/pythonuser/muhammed/data:/data
+    command: "psql -U {MY_PROD_USER} -d {MY_PROD_DB} -f /data/mydump.sql"
+    env_file:
+      - ./.env_db
+    expose:
+      - 6543:5432
+
   my_django:
     image: personalwebsite:v1
     build:
@@ -10,36 +22,14 @@ services:
       - /home/pythonuser/muhammed/muhammedbuyukkinaci.com/staticfiles:/app/staticfiles
       - /home/pythonuser/muhammed/muhammedbuyukkinaci.com/media:/app/media
     container_name: my_django
+    depends_on:
+      - my_prod_postgres
     restart: always
     env_file:
       - ./.env
     ports:
     - 8000:8000
 
-  # my_nginx:
-  #   build:
-  #     context: ./nginx
-  #     dockerfile: Dockerfile_prod
-  #   image: nginx_image:latest
-  #   volumes:
-  #     - static_volume:/app/staticfiles
-  #     - media_volume:/app/media
-  #     # - /home/pythonuser/certbot/www:/var/www/certbot/:ro
-  #     # - /home/pythonuser/nginx/conf/:/etc/nginx/conf.d/:ro  
-  #   container_name: my_nginx
-  #   ports:
-  #     - 80:80
-  #   depends_on:
-  #     - my_django
-      
-  # my_certbot:
-  #   image: certbot/certbot:latest
-  #   volumes:
-  #     - /home/pythonuser/certbot/www/:/var/www/certbot/:rw
-  #     - /home/pythonuser/certbot/conf/:/etc/letsencrypt/:rw
-  #   container_name: my_certbot
-#volumes:
-#   static_volume:
-#     external: true
-  # media_volume:
-  #   external: true
+volumes:
+  my_prod_volume:
+    external: true
