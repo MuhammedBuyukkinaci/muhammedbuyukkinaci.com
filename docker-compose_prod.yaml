@@ -10,7 +10,7 @@ services:
     command: "psql -U {MY_PROD_USER} -d {MY_PROD_DB} -f /data/mydump.sql"
     env_file:
       - ./.env_db
-    expose:
+    ports:
       - 6543:5432
 
   my_django:
