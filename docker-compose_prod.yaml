@@ -7,7 +7,7 @@ services:
     volumes:
       - my_prod_volume:/var/lib/postgresql/data
       - /home/pythonuser/muhammed/data:/data
-    command: "psql -U {MY_PROD_USER} -d {MY_PROD_DB} -f /data/mydump.sql"
+    command: "psql -h localhost -U {MY_PROD_USER} -d {MY_PROD_DB} -f /data/mydump.sql"
     env_file:
       - ./.env_db
     ports:
